@@ -209,6 +209,47 @@ const AnimeItemStyled = styled.div`
             }
         }
     }
+    @media screen and (max-width: 768px) {
+        padding: 2rem;
+        h1 {
+          font-size: 2rem;
+        }
+        .title {
+          font-size: 1.5rem;
+        }
+        .details {
+          padding: 1rem;
+          .detail {
+            grid-template-columns: 1fr;
+            img {
+              width: 100%;
+              height: auto;
+            }
+            .anime-details {
+              margin-top: 1rem;
+              p {
+                flex-direction: column;
+                gap: 0.5rem;
+              }
+            }
+          }
+        }
+        .description {
+          margin-top: 1rem;
+        }
+        .trailer-con {
+          iframe {
+            padding: 1rem;
+          }
+        }
+        .characters {
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          grid-gap: 1rem;
+          .character {
+            padding: 0.4rem;
+          }
+        }
+      }
 `;
 
 export default AnimeItem

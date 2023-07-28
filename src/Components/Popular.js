@@ -59,6 +59,24 @@ const PopularStyled = styled.div`
             border-radius: 5px;
         }
     }
+    @media screen and (max-width: 768px) {
+        .popular-anime {
+          padding-left: 1rem;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            text-align: center;
+            .anime-name {
+              font-size: 1rem;
+              font-weight: 600;
+              color: #454e56;
+            }
+          }
+        }
+      }
 `;
 
 export default Popular

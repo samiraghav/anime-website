@@ -102,6 +102,23 @@ const GalleryStyled = styled.div`
             border: 3px solid #e5e7eb;
         } 
     }
+    @media screen and (max-width: 768px) {
+        .big-image {
+          padding: 1rem;
+          margin: 1rem 0;
+          img {
+            width: 100%;
+          }
+        }
+        .small-images {
+          width: 100%;
+          padding: 1rem;
+          img {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
 `;
 
 export default Gallery

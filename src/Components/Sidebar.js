@@ -55,6 +55,22 @@ const SidebarStyled = styled.div`
             }
         }
     }
+    @media screen and (max-width: 768px) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        .anime {
+          width: 100%;
+          a {
+            flex-direction: row;
+            img {
+              width: 80px;
+            }
+            h5 {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
 `;
 
 export default Sidebar

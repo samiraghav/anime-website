@@ -59,6 +59,15 @@ const PopularStyled = styled.div`
             border-radius: 5px;
         }
     }
+    @media screen and (max-width: 768px) {
+        .upcoming-anime {
+          padding-left: 1rem;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          a {
+            height: 300px;
+          }
+        }
+      }
 `;
 
 export default Upcoming

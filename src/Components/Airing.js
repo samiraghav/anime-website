@@ -47,11 +47,28 @@ const PopularStyled = styled.div`
         grid-gap: 2rem;
         background-color: #fff;
         border-top: 5px solid #e5e7eb;
+        @media screen and (max-width: 768px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    /* Media query for even smaller screens, like mobile phones */
+    @media screen and (max-width: 480px) {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
         a{
             height: 500px;
             border-radius: 7px;
             border: 5px solid #e5e7eb;
         }
+        @media screen and (max-width: 768px) {
+        height: 400px;
+      }
+
+      @media screen and (max-width: 480px) {
+        height: 300px;
+      }
         a img{
             width: 100%;
             height: 100%;

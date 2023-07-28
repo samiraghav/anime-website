@@ -46,12 +46,6 @@ function Homepage() {
                             setRendered('popular')
                         }}>Popular<i className="fas fa-fire"></i></button>
                     </div>
-                    <form action="" className="search-form" onSubmit={handleSubmit}>
-                        <div className="input-control">
-                            <input type="text" placeholder="Search Anime" value={search} onChange={handleChange} />
-                            <button type="submit">Search</button>
-                        </div>
-                    </form>
                     <div className="filter-btn airing-filter">
                         <button onClick={() => {
                             setRendered('airing')
@@ -64,6 +58,12 @@ function Homepage() {
                             getUpcomingAnime()
                         }}>Upcoming</button>
                     </div>
+                    <form action="" className="search-form" onSubmit={handleSubmit}>
+                        <div className="input-control">
+                            <input type="text" placeholder="Search Anime" value={search} onChange={handleChange} />
+                            <button type="submit">Search</button>
+                        </div>
+                    </form>
                 </div>
             </header>
             {switchComponent()}
@@ -133,6 +133,42 @@ const HomepageStyled = styled.div`
             }
         }
     }
+     @media screen and (max-width: 768px) {
+    header {
+      // ... (existing styles for header in mobile view)
+      .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .filter-btns {
+          display: flex;
+          gap: 1rem;
+        }
+
+        form {
+          width: 100%; // Set the form to take full width
+          display: flex;
+          flex-direction: column; // Display input and button in a column
+          align-items: center;
+          gap: 1rem;
+
+          .input-control {
+            margin-bottom: 1rem;
+          }
+          .input-control input {
+            padding: 0.7rem 0.8rem;
+            font-size: 1rem;
+          }
+          .input-control button {
+            padding: 0.7rem 1rem;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
 `
 
 export default Homepage
